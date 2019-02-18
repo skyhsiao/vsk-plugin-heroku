@@ -13,7 +13,7 @@ RUN apk --update add --no-cache bash wget unzip tzdata ca-certificates libcrypto
     && cd ${SS_GIT_PATH##*/} \
     && git submodule update --init --recursive \
     && ./autogen.sh \
-    && ./configure --prefix=/usr && make \
+    && ./configure --disable-documentation \
     && make install \
     && apk del TMP \
     && rm -rf /tmp/* \
