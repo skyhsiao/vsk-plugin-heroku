@@ -6,7 +6,7 @@ WORKDIR $DOCROOT
 ENV TZ='Asia/Shanghai' \
     SS_GIT_PATH="https://github.com/shadowsocks/shadowsocks-libev"
 
-RUN apk --update add --no-cache bash wget unzip tzdata ca-certificates libcrypto1.0 libev libsodium mbedtls pcre c-ares php7 php7-apcu php7-ctype php7-curl php7-dom php7-fileinfo php7-ftp php7-iconv php7-intl php7-json php7-mbstring php7-mcrypt php7-mysqlnd php7-opcache php7-openssl php7-pdo php7-pdo_sqlite php7-phar php7-posix php7-session php7-simplexml php7-sqlite3 php7-tokenizer php7-xml php7-xmlreader php7-xmlwriter php7-zlib php7-gd php7-fpm nginx supervisor \
+RUN apk --update add --no-cache bash wget unzip tzdata ca-certificates libev libsodium mbedtls pcre c-ares php7 php7-apcu php7-ctype php7-curl php7-dom php7-fileinfo php7-ftp php7-iconv php7-intl php7-json php7-mbstring php7-mcrypt php7-mysqlnd php7-opcache php7-openssl php7-pdo php7-pdo_sqlite php7-phar php7-posix php7-session php7-simplexml php7-sqlite3 php7-tokenizer php7-xml php7-xmlreader php7-xmlwriter php7-zlib php7-gd php7-fpm nginx supervisor \
     && apk add --no-cache --virtual TMP git autoconf automake make build-base zlib-dev gettext-dev asciidoc xmlto libpcre32 libev-dev libsodium-dev libtool linux-headers mbedtls-dev openssl-dev pcre-dev c-ares-dev g++ gcc \
     && cd /tmp \
     && git clone ${SS_GIT_PATH} \
