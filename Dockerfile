@@ -13,7 +13,7 @@ RUN apk --update add --no-cache bash wget unzip tzdata ca-certificates libev lib
     && cd ${SS_GIT_PATH##*/} \
     && git submodule update --init --recursive \
     && ./autogen.sh \
-    && ./configure --disable-documentation \
+    && ./configure --prefix=/usr && make \
     && make install \
     && apk del TMP \
     && rm -rf /tmp/* \
