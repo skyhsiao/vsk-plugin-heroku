@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 
 ENV DOCROOT /docroot
 WORKDIR $DOCROOT
