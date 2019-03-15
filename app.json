@@ -3,12 +3,8 @@
   "description": "Deploy V&S&Kodexplore.",
   "keywords": ["kod"],
   "env": {
-    "VER": {
-       "description": "[V2] 版本号 默认使用latest安装最新版本 （输入版本号 进行指定版本安装。例如：3.22)",
-       "value": "latest"
-    },
     "UUID": {
-       "description": "[V2] Vmess协议默认UUID，请输入自己的UUID",
+       "description": "[V2] Vmess协议UUID，请输入自己的UUID",
        "value": "4890bd47-5180-4b1c-9a5d-3ef686543112"
     },
     "AlterID": {
@@ -31,7 +27,7 @@
        "description": "[S] WS Path路径，默认/black-box",
        "value": "/black-box"
     },
-    "SSPW": {
+    "SS_PW": {
         "description": "[S] 输入影梭密码，默认 herokushadow",
         "value": "herokushadow"
     }
